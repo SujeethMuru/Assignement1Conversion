@@ -1,8 +1,27 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = null;
 }
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width"/>
+        <title>Home page</title>
+    </head>
+    <body>
+        <form asp-controller="Home" asp-action="Index" method="post">
+            <h1>Conversion Calculator</h1>
+            <div>
+            <label asp-for="ConversionType" >Choose conversion type:</label>
+            <select asp-for="ConversionType">
+                <option value="length">Length</option>
+                <option value="liquid">Liquid</option>
+                <option value="temperature">Temperature</option>
+                <option value="mass">Mass</option>
+            </select>
+            </div>
+            
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+        </form>
+       
+    </body>
+</html>
