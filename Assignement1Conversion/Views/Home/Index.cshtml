@@ -40,9 +40,17 @@
                 <option value="GramsToOunces">Grams to Ounces</option>
             </select>
             </div>
-            
-
+            <br />
+            <div>
+            <label asp-for ="InputValue">Type the value of required conversion: </label>
+            <input asp-for ="InputValue" />
+            </div>
+            <br />
+            <div>
+                <button type="submit">Convert</button>
+                <button type="reset">Reset</button>
+            </div>
         </form>
-       
+
     </body>
 </html>
