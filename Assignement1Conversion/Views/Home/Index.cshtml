@@ -48,13 +48,15 @@
             </div>
             <br />
             <div>
+                <label>Result: </label>
+                <input value="@ViewBag.ErrorCheckResult.ToString()" readonly>
+            </div>
+            <br />
+            <div>
                 <button type="submit">Convert</button>
                 <button type="reset">Reset</button>
             </div>
-            <div>
-                <label>Result: </label>
-            <input value="@ViewBag.ErrorCheckResult.ToString()" readonly>
-            </div>
+
         </form>
 
     </body>

@@ -9,6 +9,7 @@ namespace Assignement1Conversion.Controllers
         [HttpGet]
         public IActionResult Index()
         {
+            ViewBag.ErrorCheckResult = 0;
             return View();
         }
 
