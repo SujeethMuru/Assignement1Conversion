@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Assignement1Conversion.Models;
+using System.Diagnostics;
 
 namespace Assignement1Conversion.Controllers
 {
@@ -8,5 +10,12 @@ namespace Assignement1Conversion.Controllers
         {
             return View();
         }
+
+        public IActionResult Index(ConversionModel model)
+        { 
+            ViewBag.ErrorCheckResult = model.CheckForErrors();
+            return View(model);
+        }
+
     }
 }

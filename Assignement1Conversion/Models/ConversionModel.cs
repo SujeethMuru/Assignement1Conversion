@@ -39,7 +39,7 @@
                     }
                     break;
 
-                case "Liquid:":
+                case "Liquid":
                     if (ConversionOption == "LitersToGallons")
                     {
                         result = InputValue * 0.264172m;
@@ -92,10 +92,58 @@
             return result;
         }
 
-        //public string CheckForErrors()
-        //{ 
+        public string CheckForErrors()
+        {
+            switch (ConversionType)
+                {
+                case "Length":
+                    if (ConversionOption != "KilometersToMiles" || ConversionOption != "MilesToKilometers" || ConversionOption != "YardToFeet" || ConversionOption != "FeetToYard" || ConversionOption != "InchesToCentimeters" || ConversionOption != "CentimetersToInches")
+                    {
+                        return "Invalid conversion option for Length.";
+                    }
+                    //else
+                    //{
+                    //    return Convert().ToString();
+                    //}
+                    break;
 
-        //}
+                case "Liquid":
+                    if (ConversionOption != "LitersToGallons" || ConversionOption != "GallonsToLiters" || ConversionOption != "QuartsToGallons" || ConversionOption != "GallonsToQuarts")
+                    {
+                        return "Invalid conversion option for Liquid.";
+                    }
+                    //else
+                    //{
+                    //    return Convert().ToString();
+                    //}
+                    break;
+
+                case "Temperature":
+                    if (ConversionOption != "CelsiusToFahrenheit" || ConversionOption != "FahrenheitToCelsius")
+                    {
+                        return "Invalid conversion option for Temperature.";
+                    }
+                    //else
+                    //{
+                    //    return Convert().ToString();
+                    //}
+                    break;
+
+                case "Mass":
+                    if (ConversionOption != "KilogramsToPounds" || ConversionOption != "PoundsToKilograms" || ConversionOption != "OuncesToGrams" || ConversionOption != "GramsToOunces")
+                    {
+                        return "Invalid conversion option for Mass.";
+                    }
+                    //else
+                    //{
+                    //    return Convert().ToString();
+                    //}
+                    break;
+                
+            }
+            return Convert().ToString();
+
+        }
 
     }
 }
