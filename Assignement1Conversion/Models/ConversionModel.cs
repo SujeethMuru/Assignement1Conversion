@@ -48,6 +48,14 @@
                     {
                         result = InputValue / 0.264172m;
                     }
+                    else if (ConversionOption == "PintsToGallons")
+                    {
+                        result = InputValue * 0.125m;
+                    }
+                    else if (ConversionOption == "GallonsToPints")
+                    {
+                        result = InputValue / 0.125m;
+                    }
                     else if (ConversionOption == "QuartsToGallons")
                     {
                         result = InputValue * 0.25m;
@@ -97,51 +105,39 @@
             switch (ConversionType)
                 {
                 case "Length":
-                    if (ConversionOption != "KilometersToMiles" || ConversionOption != "MilesToKilometers" || ConversionOption != "YardToFeet" || ConversionOption != "FeetToYard" || ConversionOption != "InchesToCentimeters" || ConversionOption != "CentimetersToInches")
+                    if (ConversionOption == "KilometersToMiles" || ConversionOption == "MilesToKilometers" || ConversionOption == "YardToFeet" || ConversionOption == "FeetToYard" || ConversionOption == "InchesToCentimeters" || ConversionOption == "CentimetersToInches")
                     {
-                        return "Invalid conversion option for Length.";
+                        return Convert().ToString();
                     }
-                    //else
-                    //{
-                    //    return Convert().ToString();
-                    //}
+
                     break;
 
                 case "Liquid":
-                    if (ConversionOption != "LitersToGallons" || ConversionOption != "GallonsToLiters" || ConversionOption != "QuartsToGallons" || ConversionOption != "GallonsToQuarts")
+                    if (ConversionOption == "LitersToGallons" || ConversionOption == "GallonsToLiters" || ConversionOption == "PintsToGallons" || ConversionOption == "GallonsToPints" || ConversionOption == "QuartsToGallons" || ConversionOption == "GallonsToQuarts")
                     {
-                        return "Invalid conversion option for Liquid.";
+                        return Convert().ToString();
                     }
-                    //else
-                    //{
-                    //    return Convert().ToString();
-                    //}
+
                     break;
 
                 case "Temperature":
-                    if (ConversionOption != "CelsiusToFahrenheit" || ConversionOption != "FahrenheitToCelsius")
+                    if (ConversionOption == "CelsiusToFahrenheit" || ConversionOption == "FahrenheitToCelsius")
                     {
-                        return "Invalid conversion option for Temperature.";
+                        return Convert().ToString();
                     }
-                    //else
-                    //{
-                    //    return Convert().ToString();
-                    //}
+
                     break;
 
                 case "Mass":
-                    if (ConversionOption != "KilogramsToPounds" || ConversionOption != "PoundsToKilograms" || ConversionOption != "OuncesToGrams" || ConversionOption != "GramsToOunces")
+                    if (ConversionOption == "KilogramsToPounds" || ConversionOption == "PoundsToKilograms" || ConversionOption == "OuncesToGrams" || ConversionOption == "GramsToOunces")
                     {
-                        return "Invalid conversion option for Mass.";
+                        return Convert().ToString();
                     }
-                    //else
-                    //{
-                    //    return Convert().ToString();
-                    //}
+
                     break;
                 
             }
-            return Convert().ToString();
+            return "Invalid conversion option for Liquid.";
 
         }
 
