@@ -6,11 +6,13 @@ namespace Assignement1Conversion.Controllers
 {
     public class HomeController : Controller
     {
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
 
+        [HttpPost]
         public IActionResult Index(ConversionModel model)
         { 
             ViewBag.ErrorCheckResult = model.CheckForErrors();
